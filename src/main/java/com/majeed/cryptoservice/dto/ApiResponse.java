@@ -1,4 +1,4 @@
-package com.majeed.cryptoservice.entity.dto;
+package com.majeed.cryptoservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,27 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApiResponse {
+public class ApiResponse<T> {
     private boolean success;
     private String message;
-    private SuccessDetail successDetail;
-    private ErrorDetail error;
-}
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class SuccessDetail<T> {
-    private String code;
-    private T data;
-}
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class ErrorDetail<T> {
-    private String code;
-    private T data;
+    private SuccessDetail<T> successDetail;
+    private ErrorDetail<T> error;
 }
