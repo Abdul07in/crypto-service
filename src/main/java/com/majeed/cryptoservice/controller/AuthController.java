@@ -21,6 +21,7 @@ public class AuthController {
 
     @GetMapping("/exception")
     public ApiResponse<String> checkException(@RequestParam String flag) throws CryptoServiceException {
+        log.info("checkException with flag value = {}", flag);
         if (StringUtils.isEmpty(flag)) {
             log.info("flag is null");
             throw new CryptoServiceException(ErrorCode.INVALID_INPUT);

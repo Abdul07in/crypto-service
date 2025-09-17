@@ -31,3 +31,8 @@ spring:
     serialization:
       write-dates-as-timestamps: false
     time-zone: Asia/Kolkata
+
+
+logging:
+  level:
+    root: info

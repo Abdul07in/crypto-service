@@ -3,14 +3,16 @@ package com.majeed.cryptoservice.constants;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
-@Getter
+
 public enum SuccessCode {
 
     FETCH_SUCCESS(HttpStatus.OK, "001", ServiceConstants.DATA_FETCHED_SUCCESSFULLY);
 
 
+    @Getter
     private final HttpStatus httpStatus;
     private final String code;
+    @Getter
     private final String description;
 
     SuccessCode(HttpStatus httpStatus, String code, String description) {
